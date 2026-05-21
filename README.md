@@ -5,5 +5,5 @@ Siga as instruções do [slide](https://dvcirilo-ifrn.github.io/pweb/slides/aula
 **Data de Entrega**: 29/05/2026
 
 ## Equipe
-- Pessoa 1
-- Pessoa 2
+- [carlos eduardo](https://github.com/eduardolemoscosta)
+- [João Pedro](https://github.com/oi-jotape)
