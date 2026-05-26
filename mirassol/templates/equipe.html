@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block title %}Elenco - Mirassol FC{% endblock %}
+
+{% block content %}
+    <div class="text-center mb-4">
+        <h1 class="section-title">Elenco do Mirassol FC</h1>
+        <p class="text-muted">Confira os jogadores que compõem o time e as informações técnicas de cada atleta.</p>
+    </div>
+    <div class="row g-4">
+        {% for jogador in jogadores %}
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{{ jogador.foto }}" class="card-img-top" alt="Foto de {{ jogador.nome }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ jogador.nome }}</h5>
+                        <p class="card-text"><strong>Posição:</strong> {{ jogador.posicao }}</p>
+                        <p class="card-text"><strong>Idade:</strong> {{ jogador.idade }} anos</p>
+                        <p class="card-text"><strong>Natural de:</strong> {{ jogador.nascimento }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
