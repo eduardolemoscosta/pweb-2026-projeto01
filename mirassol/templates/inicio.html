@@ -1,4 +1,5 @@
 {% extends 'index.html' %}
+{% load static %}
 
 {% block title %}Início - Mirassol FC{% endblock %}
 
@@ -11,7 +12,7 @@
     </div>
     <div class="col-lg-6">
         <div class="card shadow-sm border-0">
-            <img src="{{ estadio_url }}" class="card-img-top" alt="Estádio Maião">
+            <img src="{% static 'img/maiao.png' %}" class="card-img-top" alt="Estádio Maião" loading="lazy" decoding="async">
         </div>
     </div>
 </div>

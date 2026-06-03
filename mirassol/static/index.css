@@ -1,0 +1,283 @@
+:root {
+    --club-yellow: #f9d70b;
+    --club-yellow-dark: #d8b400;
+    --club-green: #154734;
+    --club-green-light: #1f7f4f;
+    --club-white: #ffffff;
+    --club-gray: #edf2f7;
+    --club-text: #000000;
+    --club-shadow: rgba(21, 71, 52, 0.14);
+}
+
+/* =========================
+   GERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-width: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #f9fafb 0%, #e8eef5 45%, #e9eff5 100%);
+    color: var(--club-text);
+}
+
+main {
+    min-height: 80vh;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: linear-gradient(90deg, var(--club-green), var(--club-green-light)) !important;
+    box-shadow: 0 6px 30px var(--club-shadow);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--club-yellow) !important;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.12);
+}
+
+.navbar-nav {
+    gap: 0.75rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    position: relative;
+    color: rgba(255, 255, 255, 0.92) !important;
+    transition: color 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--club-yellow) !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: var(--club-yellow);
+    transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section-title {
+    color: var(--club-green);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 4px;
+    background: var(--club-yellow);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.lead {
+    font-size: 1.16rem;
+    line-height: 1.8;
+    color: #4b5563;
+    max-width: 720px;
+}
+
+.card {
+    border-radius: 22px;
+    border: 1px solid rgba(31, 120, 79, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.98);
+    max-width: 300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 70px rgba(15, 81, 50, 0.12) !important;
+}
+
+.card-img-top {
+    height: 340px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.02);
+}
+
+.card-body {
+    padding: 1.8rem;
+}
+
+.card-title {
+    color: var(--club-green);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #4f565d;
+    line-height: 1.75;
+}
+
+.card-text strong {
+    color: var(--club-green);
+}
+
+.row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.row.g-4 > div {
+    flex: 0 1 300px;
+    max-width: 300px;
+}
+
+.row.g-4 .card {
+    border-top: 4px solid var(--club-yellow);
+}
+
+.row.g-4 .card:hover {
+    border-top-color: var(--club-green);
+}
+
+.col-lg-6 img {
+    border-radius: 22px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn-mirassol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--club-yellow);
+    color: var(--club-green);
+    font-weight: 700;
+    border: none;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 12px 25px rgba(21, 71, 52, 0.16);
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.btn-mirassol:hover {
+    background: var(--club-yellow-dark);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.footer {
+    background: linear-gradient(90deg, var(--club-green), #0b3a24);
+    color: #f8f9fa;
+    margin-top: 4rem;
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .card-img-top {
+        height: 260px;
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        border-radius: 18px;
+    }
+
+    .card-img-top {
+        height: 220px;
+    }
+}
