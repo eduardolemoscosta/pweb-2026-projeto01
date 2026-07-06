@@ -4,16 +4,19 @@
 {% block title %}Início - Mirassol FC{% endblock %}
 
 {% block content %}
-<div class="row align-items-center">
-    <div class="col-lg-6">
-        <h1 class="section-title">{{ titulo }}</h1>
-        <p class="lead">{{ historico }}</p>
-        <p>Conheça o Maião, o estádio que recebe as partidas do Mirassol FC e inspira a torcida do Leão Caipira.</p>
-    </div>
-    <div class="col-lg-6">
-        <div class="card shadow-sm border-0">
-            <img src="{% static 'img/maiao.png' %}" class="card-img-top" alt="Estádio Maião" loading="lazy" decoding="async">
+<section class="hero-section py-5">
+    <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+            <span class="eyebrow">Bem-vindo ao Leão Caipira</span>
+            <h1 class="section-title">{{ titulo }}</h1>
+            <p class="lead">{{ historico }}</p>
+            <p class="text-muted">Conheça o Maião, o estádio que recebe as partidas do Mirassol FC e inspira a torcida do Leão Caipira.</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="hero-card shadow-sm border-0">
+                <img src="{% static 'img/maiao.png' %}" class="card-img-top" alt="Estádio Maião" loading="lazy" decoding="async">
+            </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
